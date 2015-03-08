@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F522A3E91AAC39F9009DE24A /* quicksort.c in Sources */ = {isa = PBXBuildFile; fileRef = F522A3E81AAC39F9009DE24A /* quicksort.c */; };
 		F5EA170A1AAA03730031E2EA /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F5EA17091AAA03730031E2EA /* main.c */; };
 		F5EA17131AAA039E0031E2EA /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = F5EA17111AAA039E0031E2EA /* list.c */; };
 		F5EA17171AAA0AC60031E2EA /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = F5EA17151AAA0AC60031E2EA /* stack.c */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F522A3E81AAC39F9009DE24A /* quicksort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = quicksort.c; sourceTree = "<group>"; };
+		F522A3EA1AAC3B39009DE24A /* sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sort.h; sourceTree = "<group>"; };
 		F5EA17061AAA03730031E2EA /* algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5EA17091AAA03730031E2EA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F5EA17111AAA039E0031E2EA /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
@@ -47,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F522A3E71AAC39DA009DE24A /* sort */ = {
+			isa = PBXGroup;
+			children = (
+				F522A3E81AAC39F9009DE24A /* quicksort.c */,
+				F522A3EA1AAC3B39009DE24A /* sort.h */,
+			);
+			name = sort;
+			sourceTree = "<group>";
+		};
 		F5EA16FD1AAA03730031E2EA = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 		F5EA17081AAA03730031E2EA /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				F522A3E71AAC39DA009DE24A /* sort */,
 				F5EA17181AAA0C770031E2EA /* queue */,
 				F5EA17141AAA0AA40031E2EA /* stack */,
 				F5EA17101AAA03810031E2EA /* list */,
@@ -160,6 +173,7 @@
 				F5EA17171AAA0AC60031E2EA /* stack.c in Sources */,
 				F5EA171B1AAA0C810031E2EA /* queue.c in Sources */,
 				F5EA170A1AAA03730031E2EA /* main.c in Sources */,
+				F522A3E91AAC39F9009DE24A /* quicksort.c in Sources */,
 				F5EA17131AAA039E0031E2EA /* list.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +288,7 @@
 				F5EA170F1AAA03730031E2EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
