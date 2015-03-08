@@ -13,6 +13,7 @@
 
 typedef struct list_node_t{
     void *data;
+    struct list_node_t *prev;
     struct list_node_t *next;
 }list_node;
 
@@ -23,6 +24,10 @@ typedef struct list_t{
     list_node *head;
     list_node *tail;
 }list;
+
+typedef list double_list;
+
+typedef list circle_list;
 
 void list_init(list *, void (*)(void *));
 void list_destroy(list *);
@@ -37,5 +42,18 @@ int list_remove(list *, list_node *, void **);
 #define list_is_tail(element) ((element)->next == NULL ? 1 : 0)
 #define list_next(element) ((element)->next)
 #define list_data(element) ((element)->data)
+#define list_prev(element) ((element)->prev)
+
+
+// Double list.
+void double_list_init(double_list*, void(*)(void*));
+#define double_list_destroy list_destroy
+#define double_list_insert list_insert
+#define double_list_remove list_remove
+
+#define double_list_size list_size
+
+// Circle list.
+#
 
 #endif /* defined(__algorithm__list__) */

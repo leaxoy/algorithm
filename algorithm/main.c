@@ -10,6 +10,6 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    
+    printf("%s\n", "Hello,world");
     return 0;
 }

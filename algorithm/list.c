@@ -20,7 +20,7 @@ void list_init(list *me, void (*destroy)(void *data)) {
 
 void list_destroy(list *me) {
     void *data;
-    while (list_size(me)>0) {
+    while (list_size(me) > 0) {
         if (list_remove(me, NULL, (void **)data)
             == 0 && me->destroy != NULL)
             me->destroy(data);
@@ -61,11 +61,9 @@ int list_remove(list *me, list_node *node, void **data) {
         me->head = me->head->next;
         if (list_size(me) == 1)
             me->tail = NULL;
-        
     }else{
         if (node->next == NULL)
             return -1;
-        
         *data = node->next->data;
         zero = node->next;
         node->next = node->next->next;
