@@ -10,7 +10,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-
 #include "sort.h"
 
 int cmp (const void *e1, const void *e2){
