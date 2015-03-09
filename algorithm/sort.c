@@ -12,7 +12,7 @@
 
 #include "sort.h"
 
-int insertSort(void *data, long size, int len, int (*cmp)(const void *e1, const void *e2)) {
+int insertSort(void *data, long size, int len, int cmp(const void *e1, const void *e2)) {
     char *a = data;
     void *key;
     int i, j;
@@ -23,7 +23,7 @@ int insertSort(void *data, long size, int len, int (*cmp)(const void *e1, const 
     for (j = 1; j < size; j ++) {
         memcpy(key, &a[j * len], len);
         i = j - 1;
-        while (i >=0 && cmp(&a[i * len], key) > 0) {
+        while (i >= 0 && cmp(&a[i * len], key) > 0) {
             memcpy(&a[(i + 1) * len], &a[i * len], len);
             i --;
         }
