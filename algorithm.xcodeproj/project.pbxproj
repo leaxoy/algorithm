@@ -12,6 +12,7 @@
 		F5E751821AADBC8400F8DC00 /* test_queue.c in Sources */ = {isa = PBXBuildFile; fileRef = F5E751811AADBC8400F8DC00 /* test_queue.c */; };
 		F5E751841AADBC8C00F8DC00 /* test_stack.c in Sources */ = {isa = PBXBuildFile; fileRef = F5E751831AADBC8C00F8DC00 /* test_stack.c */; };
 		F5E751861AADBC9300F8DC00 /* test_list.c in Sources */ = {isa = PBXBuildFile; fileRef = F5E751851AADBC9300F8DC00 /* test_list.c */; };
+		F5E751951AADC41400F8DC00 /* console-colors.c in Sources */ = {isa = PBXBuildFile; fileRef = F5E7518F1AADC41400F8DC00 /* console-colors.c */; };
 		F5EA170A1AAA03730031E2EA /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F5EA17091AAA03730031E2EA /* main.c */; };
 		F5EA17131AAA039E0031E2EA /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = F5EA17111AAA039E0031E2EA /* list.c */; };
 		F5EA17171AAA0AC60031E2EA /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = F5EA17151AAA0AC60031E2EA /* stack.c */; };
@@ -37,8 +38,13 @@
 		F5E751811AADBC8400F8DC00 /* test_queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_queue.c; sourceTree = "<group>"; };
 		F5E751831AADBC8C00F8DC00 /* test_stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_stack.c; sourceTree = "<group>"; };
 		F5E751851AADBC9300F8DC00 /* test_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_list.c; sourceTree = "<group>"; };
-		F5E751891AADBD0700F8DC00 /* minunit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minunit.h; sourceTree = "<group>"; };
-		F5E7518A1AADBD0700F8DC00 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		F5E7518C1AADC41400F8DC00 /* assertion-macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "assertion-macros.h"; sourceTree = "<group>"; };
+		F5E7518D1AADC41400F8DC00 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		F5E7518F1AADC41400F8DC00 /* console-colors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "console-colors.c"; sourceTree = "<group>"; };
+		F5E751901AADC41400F8DC00 /* console-colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "console-colors.h"; sourceTree = "<group>"; };
+		F5E751911AADC41400F8DC00 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		F5E751931AADC41400F8DC00 /* describe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = describe.h; sourceTree = "<group>"; };
+		F5E751941AADC41400F8DC00 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		F5EA17061AAA03730031E2EA /* algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5EA17091AAA03730031E2EA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F5EA17111AAA039E0031E2EA /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
@@ -73,19 +79,40 @@
 		F5E751871AADBD0700F8DC00 /* deps */ = {
 			isa = PBXGroup;
 			children = (
-				F5E751881AADBD0700F8DC00 /* minunit */,
+				F5E7518B1AADC41400F8DC00 /* assertion-macros */,
+				F5E7518E1AADC41400F8DC00 /* console-colors */,
+				F5E751921AADC41400F8DC00 /* describe */,
 			);
 			name = deps;
 			path = algorithm/deps;
 			sourceTree = "<group>";
 		};
-		F5E751881AADBD0700F8DC00 /* minunit */ = {
+		F5E7518B1AADC41400F8DC00 /* assertion-macros */ = {
 			isa = PBXGroup;
 			children = (
-				F5E751891AADBD0700F8DC00 /* minunit.h */,
-				F5E7518A1AADBD0700F8DC00 /* package.json */,
+				F5E7518C1AADC41400F8DC00 /* assertion-macros.h */,
+				F5E7518D1AADC41400F8DC00 /* package.json */,
 			);
-			path = minunit;
+			path = "assertion-macros";
+			sourceTree = "<group>";
+		};
+		F5E7518E1AADC41400F8DC00 /* console-colors */ = {
+			isa = PBXGroup;
+			children = (
+				F5E7518F1AADC41400F8DC00 /* console-colors.c */,
+				F5E751901AADC41400F8DC00 /* console-colors.h */,
+				F5E751911AADC41400F8DC00 /* package.json */,
+			);
+			path = "console-colors";
+			sourceTree = "<group>";
+		};
+		F5E751921AADC41400F8DC00 /* describe */ = {
+			isa = PBXGroup;
+			children = (
+				F5E751931AADC41400F8DC00 /* describe.h */,
+				F5E751941AADC41400F8DC00 /* package.json */,
+			);
+			path = describe;
 			sourceTree = "<group>";
 		};
 		F5EA16FD1AAA03730031E2EA = {
@@ -206,6 +233,7 @@
 				F5A462D71AAC78890088D688 /* sort.c in Sources */,
 				F5EA17171AAA0AC60031E2EA /* stack.c in Sources */,
 				F5E751841AADBC8C00F8DC00 /* test_stack.c in Sources */,
+				F5E751951AADC41400F8DC00 /* console-colors.c in Sources */,
 				F5EA171B1AAA0C810031E2EA /* queue.c in Sources */,
 				F5E751821AADBC8400F8DC00 /* test_queue.c in Sources */,
 				F5E751861AADBC9300F8DC00 /* test_list.c in Sources */,
