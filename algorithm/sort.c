@@ -12,7 +12,7 @@
 
 #include "sort.h"
 
-int insertSort(void *data, long size, int len, int cmp(const void *e1, const void *e2)) {
+int insertSort(void *data, long size, int len, int (*cmp) (const void *e1, const void *e2)) {
     char *a = data;
     void *key;
     int i, j;
@@ -35,5 +35,9 @@ int insertSort(void *data, long size, int len, int cmp(const void *e1, const voi
 }
 
 int quickSort(void *data, long size, int len, int (*cmp)(const void *e1, const void *e2)) {
+    return -1;
+}
+
+int mergeSort(void *data, long size, int len, int (*cmp)(const void *e1, const void *e2)) {
     return -1;
 }
