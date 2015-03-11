@@ -11,13 +11,13 @@
 
 #include <stdio.h>
 
-typedef struct list_node_t{
+typedef struct list_node_t {
     void *data;
     struct list_node_t *prev;
     struct list_node_t *next;
 }list_node;
 
-typedef struct list_t{
+typedef struct list_t {
     int size;
     int (*match)(const void *n1, const void *n2);
     void (*destroy)(void *data);
