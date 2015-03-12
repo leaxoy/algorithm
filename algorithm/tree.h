@@ -23,4 +23,8 @@ typedef struct tree{
     uint height;
 }tree_t;
 
+typedef struct tree_itertor{
+    uint current;
+}tree_itertor_t;
+
 #endif /* defined(__algorithm__tree__) */

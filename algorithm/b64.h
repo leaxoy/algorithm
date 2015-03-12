@@ -21,6 +21,7 @@ typedef struct {
 
 int b64_init(b64_t*);
 int b64_update(b64_t*, void*);
-int b64(b64_t*);
+int b64_encode(b64_t*);
+int b64_decode(b64_t*, void*);
 
 #endif /* defined(__algorithm__b64__) */

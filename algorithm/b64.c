@@ -21,7 +21,7 @@ int b64_update(b64_t *b, void* data) {
     return 0;
 }
 
-int b64(b64_t *b) {
+int b64_encode(b64_t *b) {
     if (b->data == NULL) {
         return -1;
     }
@@ -41,8 +41,6 @@ int b64(b64_t *b) {
     return 0;
 }
 
-char * _getFile(const char * file) {
-    
-    return "";
+int b64_decode(b64_t* b, void *data) {
+    return 0;
 }
-

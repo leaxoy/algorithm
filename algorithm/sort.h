@@ -42,6 +42,9 @@ int mergeSort(void *, long, int, int(*)(const void *, const void *));
  第四个参数是一个比较函数， 比较两个元素的值，并返回约定好的整数，用来进行排序。
  该算法的时间复杂度是 O(n*lg(n));
  */
+
+void swap(const void *, const void *);
+int partition(void *, long , long );
 int quickSort(void *, long, int, int(*)(const void *, const void *));
 
 /*
