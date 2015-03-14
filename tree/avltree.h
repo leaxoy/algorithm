@@ -9,44 +9,77 @@
 #ifndef algorithm_avltree_h
 #define algorithm_avltree_h
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+typedef struct {
+    void* key;
+    void* val;
+} node_t;
 
-typedef struct node_t {
-	struct node_t *parent;
-	struct node_t *left;
-	struct node_t *right;
-	void *data;
-}node;
+typedef struct {
+    /* size of array */
+    int size;
+    int count;
+    long (*cmp)(
+        const void *e1,
+        const void *e2);
+    node_t *nodes;
+} avltree_t;
 
-typedef struct avltree_t {
-	int size;
-	struct node *root;
-	void *data;
-}avltree;
+typedef struct {
+    int current_node;
+} avltree_iterator_t;
 
-typedef struct tree_iterator {
-	int current;
-}iterator;
+avltree_t* avltree_new(long (*cmp)(const void *e1, const void *e2));
 
-#define left(node) ((node)->left)
-#define right(node) ((node)->right)
-#define parent(node) ((node)->parent)
-#define tree_root(avltree) ((avltree)->root)
-#define tree_size(avltree) ((avltree)->size)
+void* avltree_remove(avltree_t* me, void* k);
 
-void node_init(node *);
-void node_destory(node *);
+int avltree_count(avltree_t* me);
 
-void tree_init(avltree *);
-void tree_insert(avltree *, node *);
-void tree_remove(avltree *, node *);
-void tree_destory(avltree *);
-void tree_rotate();
+int avltree_size(avltree_t* me);
 
-#ifdef __cplusplus
-}
-#endif
+int avltree_height(avltree_t* me);
+
+void avltree_empty(avltree_t* me);
+
+void avltree_insert(avltree_t* me, void* k, void* v);
+
+void* avltree_get(avltree_t* me, const void* k);
+
+void* avltree_get_from_idx(avltree_t* me, int idx);
+
+/**
+ * Rotate on X:
+ * Y = X's parent
+ * Step A: Y becomes left child of X
+ * Step B: X's left child's becomes Y's right child */
+void avltree_rotate_left(avltree_t* me, int idx);
+
+/**
+ * Rotate on X:
+ * Y = X's left child
+ * Step A: X becomes right child of X's left child
+ * Step B: X's left child's right child becomes X's left child */
+void avltree_rotate_right(avltree_t* me, int idx);
+
+
+/**
+ * Initialise a new hash iterator over this hash
+ * It is NOT safe to remove items while iterating.  */
+void avltree_iterator(avltree_t * h, avltree_iterator_t * iter);
+
+/**
+ * Iterate to the next item on an iterator
+ * @return next item key from iterator */
+void *avltree_iterator_next(avltree_t * h, avltree_iterator_t * iter);
+
+/**
+ * Iterate to the next item on an iterator
+ * @return next item value from iterator */
+void *avltree_iterator_next_value(avltree_t * h, avltree_iterator_t * iter);
+
+int avltree_iterator_has_next(avltree_t * h, avltree_iterator_t * iter);
+
+void* avltree_iterator_peek_value(avltree_t * h, avltree_iterator_t * iter);
+
+void* avltree_iterator_peek(avltree_t * h, avltree_iterator_t * iter);
 
 #endif
