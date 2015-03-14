@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 李晓辉. All rights reserved.
 //
 
-#ifndef __algorithm__b64__
-#define __algorithm__b64__
+#ifndef algorithm_b64_h
+#define algorithm_b64_h
 
 #include <stdio.h>
 
@@ -24,4 +24,4 @@ int b64_update(b64_t*, void*);
 int b64_encode(b64_t*);
 int b64_decode(b64_t*, void*);
 
-#endif /* defined(__algorithm__b64__) */
+#endif

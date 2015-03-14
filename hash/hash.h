@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 李晓辉. All rights reserved.
 //
 
-#ifndef __algorithm__hash__
-#define __algorithm__hash__
+#ifndef algorithm_hash_h
+#define algorithm_hash_h
 
 #include <stdio.h>
 
@@ -31,4 +31,4 @@ void hash(hash_t*);
 }
 #endif
 
-#endif /* defined(__algorithm__hash__) */
+#endif

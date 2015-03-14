@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 李晓辉. All rights reserved.
 //
 
-#ifndef __algorithm__queue__
-#define __algorithm__queue__
+#ifndef algorithm_queue_h
+#define algorithm_queue_h
 
 #include <stdio.h>
 #include "list.h"
@@ -24,4 +24,4 @@ int queue_out(queue*, void **);
 
 #define queue_size list_size
 
-#endif /* defined(__algorithm__queue__) */
+#endif

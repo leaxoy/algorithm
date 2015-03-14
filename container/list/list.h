@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 李晓辉. All rights reserved.
 //
 
-#ifndef __algorithm__list__
-#define __algorithm__list__
+#ifndef algorithm_list_h
+#define algorithm_list_h
 
 #include <stdio.h>
 
@@ -56,4 +56,4 @@ void double_list_init(double_list*, void(*)(void*));
 // Circle list.
 #
 
-#endif /* defined(__algorithm__list__) */
+#endif
