@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 李晓辉. All rights reserved.
 //
 
-#include <stdlib.h>
-
 #include "b64.h"
 
 int b64_init(b64_t *b) {
@@ -23,7 +21,7 @@ int b64_update(b64_t *b, void* data) {
 
 int b64_encode(b64_t *b) {
     if (b->data == NULL) {
-        return -1;
+        return 1;
     }
     char *a;
     char *tmp, *cache;
@@ -42,5 +40,13 @@ int b64_encode(b64_t *b) {
 }
 
 int b64_decode(b64_t* b, void *data) {
+    char *res;
+    res = (char *)malloc(strlen(b->data)*3/4);
+    if (res == NULL) {
+        return -1;
+    }
+    long block = strlen(b->data) / 3;
+    data = (void *)res;
+    free(res);
     return 0;
 }

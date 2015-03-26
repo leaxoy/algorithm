@@ -15,7 +15,7 @@ extern "C" {
 #endif
 
 /*  
- 这是快速排序的算法。
+ 这是插入排序的算法。
  第一个参数是待排序的数组，
  第二个参数是数组元素的个数，
  第三个参数是数组元素的长度，
@@ -43,9 +43,7 @@ int mergeSort(void *, long, int, int(*)(const void *, const void *));
  该算法的时间复杂度是 O(n*lg(n));
  */
 
-void swap(const void *, const void *);
-int partition(void *, long , long );
-int quickSort(void *, long, int, int(*)(const void *, const void *));
+int quickSort(void *, long, int, int, int, int(*)(const void *, const void *));
 
 /*
  这是快速排序的算法。

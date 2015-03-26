@@ -10,6 +10,8 @@
 #define algorithm_b64_h
 
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 static const char _encodeStd[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 static const char _encodeUrl[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
